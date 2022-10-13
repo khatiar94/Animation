@@ -1,0 +1,77 @@
+.cover-block {
+	width: 1250px;
+	height: 650px;
+	position: relative;
+	display: inline-block;
+}
+
+
+.mermaid-block {
+	width: 300px;
+	position: absolute;
+	top: 20%;
+	left: 30%;
+    transition: all 0.5s linear 1s;
+}
+
+
+/* hover */
+
+.mermaid-block:hover {
+	transform: scale(2.1);
+}
+
+
+.fish-block {
+	width: 100px;
+	position: absolute;
+    top: 300px;
+    left: 600px;
+}
+
+.crab-block {
+	width: 100px;
+	position: absolute;
+    bottom: 300px;
+    right: 300px;
+    animation-name: crabmove;
+    animation: crabmoveanimation 5s infinite ease-in-out alternate 0.1s;
+}
+
+
+@keyframes crabmoveanimation {
+	from {transform: translateX(0px);}
+	to {transform: translateX(100px);}
+}
+
+
+
+.bubbles-block {
+	width: 100px;
+	position: absolute;
+    bottom: 300px;
+    right: 200px;
+    animation: bubblesmoveanimation 5s infinite ease-in-out alternate 0.1s;
+}
+  
+@keyframes bubblesmoveanimation {
+	from {transform: translateX(80px);}
+	to {transform: translateX(40px);}
+}
+
+
+
+.starfish-block{
+	width: 100px;
+	position: absolute;
+	top: 50%;
+	left: 10%;
+    animation: starfishmoveanimation 5s infinite ease-in-out alternate 0.1s;
+}
+
+
+@keyframes starfishmoveanimation {
+ from { transform: rotate(0deg);}
+ to { transform: rotate(360deg);}
+ }
+
