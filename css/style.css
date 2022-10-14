@@ -5,15 +5,13 @@
 	display: inline-block;
 }
 
-
 .mermaid-block {
 	width: 300px;
 	position: absolute;
 	top: 20%;
 	left: 30%;
-    transition: all 0.5s linear 1s;
+    transition: all 7.5s linear 1s;
 }
-
 
 /* hover */
 
@@ -21,57 +19,57 @@
 	transform: scale(2.1);
 }
 
-
 .fish-block {
 	width: 100px;
 	position: absolute;
-    top: 300px;
-    left: 600px;
+    animation: fishmove 5s alternate infinite ease-in;
+}
+
+@keyframes fishmove {
+	  0% {left: 100px; top: 100px;}
+	  25%  {left: 700px; top: 50px;}
+	  50%  {left: 700px; top: 500px;}
+	  75%  {left: 100px; top: 200px;}
+	  100% {left: 100px; top: 100px;}
 }
 
 .crab-block {
 	width: 100px;
 	position: absolute;
     bottom: 300px;
-    right: 300px;
-    animation-name: crabmove;
-    animation: crabmoveanimation 5s infinite ease-in-out alternate 0.1s;
+    right: 370px;
+    animation: crabmove 5s infinite ease-in-out alternate 0.1s;
 }
 
-
-@keyframes crabmoveanimation {
+@keyframes crabmove {
 	from {transform: translateX(0px);}
 	to {transform: translateX(100px);}
 }
-
-
 
 .bubbles-block {
 	width: 100px;
 	position: absolute;
     bottom: 300px;
     right: 200px;
-    animation: bubblesmoveanimation 5s infinite ease-in-out alternate 0.1s;
+    animation: bubblesmove 5s infinite ease-in-out alternate 2.5s;
 }
   
-@keyframes bubblesmoveanimation {
-	from {transform: translateX(80px);}
-	to {transform: translateX(40px);}
+@keyframes bubblesmove {
+	from {bottom: 300px;}
+	to {bottom: 500px; filter: blur(10px); width: 40px;}
 }
-
-
 
 .starfish-block{
 	width: 100px;
 	position: absolute;
 	top: 50%;
 	left: 10%;
-    animation: starfishmoveanimation 5s infinite ease-in-out alternate 0.1s;
+    animation: starfishmove 5s infinite ease-in-out alternate 0.1s;
 }
 
 
-@keyframes starfishmoveanimation {
+@keyframes starfishmove {
  from { transform: rotate(0deg);}
- to { transform: rotate(360deg);}
+ to { transform: rotate(360deg); width: 200px;}
  }
 
